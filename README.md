@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+backend run at 'E:\ReactJS\Git Forks\CRUD\react-contact-manager-master\react-contact-manager-master\backend>'
+## Steps Followed
+
+1. install packages
+     npm i redux axios react-redux redux-thunk @reduxjs/toolkit redux-devtools-extension react-router-dom@6 --save
+
+2.  Setup our redux environment       

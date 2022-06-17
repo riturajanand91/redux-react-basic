@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import UserListComponent from './components/UserList/userListComponent';
+import HeaderComponent from './components/layouts/headerComponent/header';
+import UserDetailComponent from './components/UserDetail/userDetailComponent';
+import UserAddComponent from './components/UserAdd/userAddComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div className="ui container">
+      <BrowserRouter>
+        <HeaderComponent></HeaderComponent>
+        <Routes>
+          <Route path="/*" element={<UserListComponent />} exact />
+          <Route path="/user/add" element={<UserAddComponent />} />
+          <Route path="/user/detail/:id" element={<UserDetailComponent />} />
+          {/*<Route path="/streams/edit" element={<StreamEditComponent />} />
+          <Route path="/streams/delete" element={<StreamDeleteComponent />} />
+          <Route path="/streams/show" element={<StreamShowComponent />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </div >
+  )
 }
 
 export default App;
